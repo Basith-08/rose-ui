@@ -1,0 +1,70 @@
+{
+  "name": "@rose/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Publishable Vue 3 component library for Rose UI.",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "clean": "rm -rf dist",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly -p tsconfig.build.json",
+    "build": "pnpm run clean && vite build && pnpm run build:types",
+    "lint": "vue-tsc --noEmit -p tsconfig.app.json && vue-tsc --noEmit -p tsconfig.node.json && vue-tsc --noEmit -p tsconfig.build.json",
+    "prepack": "pnpm run build",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@rose/config": "workspace:*",
+    "@rose/tokens": "workspace:*",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vue/tsconfig": "^0.8.1",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vue": "^3.5.25",
+    "vue-tsc": "^3.1.5"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "vue",
+    "component-library",
+    "tailwind",
+    "design-system",
+    "rose-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basith-08/rose-ui.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://github.com/Basith-08/rose-ui/tree/main/packages/ui#readme",
+  "bugs": {
+    "url": "https://github.com/Basith-08/rose-ui/issues"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+coverage
+.changeset/pre.json
+apps/*/dist
+apps/*/node_modules
+packages/*/dist
+packages/*/*.tsbuildinfo
+packages/ui/node_modules
+packages/tokens/node_modules
+packages/ui/.vscode
+packages/ui/.gitignore
+.local-packages

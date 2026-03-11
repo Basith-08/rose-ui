@@ -1,0 +1,49 @@
+{
+  "name": "rose-ui",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Rose UI monorepo for publishable Vue 3 design tokens and component libraries.",
+  "scripts": {
+    "build": "pnpm --filter @rose/tokens build && pnpm --filter @rose/ui build",
+    "build:apps": "pnpm --filter @rose/playground build && pnpm --filter @rose/docs build",
+    "pack:local": "node ./scripts/pack-local.mjs",
+    "lint": "pnpm --filter @rose/tokens lint && pnpm --filter @rose/ui lint && pnpm --filter @rose/playground lint && pnpm --filter @rose/docs lint",
+    "test": "vitest run --coverage",
+    "check": "pnpm lint && pnpm build && pnpm build:apps && pnpm test && pnpm smoke:imports",
+    "dev:playground": "pnpm --filter @rose/playground dev",
+    "dev:docs": "pnpm --filter @rose/docs dev",
+    "smoke:imports": "node ./scripts/smoke-imports.mjs",
+    "verify:consumer": "node ./scripts/verify-consumer.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release:status": "node ./scripts/release-status.mjs",
+    "release:prepare": "pnpm check && pnpm release:status",
+    "release": "changeset publish"
+  },
+  "keywords": [
+    "monorepo",
+    "vue",
+    "design-system",
+    "ui-library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basith-08/rose-ui.git"
+  },
+  "homepage": "https://github.com/Basith-08/rose-ui#readme",
+  "bugs": {
+    "url": "https://github.com/Basith-08/rose-ui/issues"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^28.1.0",
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.18",
+    "vue": "^3.5.30"
+  }
+}

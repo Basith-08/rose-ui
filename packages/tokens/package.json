@@ -1,0 +1,53 @@
+{
+  "name": "@rose/tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Publishable design tokens for the Rose UI component system.",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm run clean && vite build && tsc -p tsconfig.build.json",
+    "lint": "tsc --noEmit -p tsconfig.build.json",
+    "prepack": "pnpm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "design-tokens",
+    "vue",
+    "tailwind",
+    "rose-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basith-08/rose-ui.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://github.com/Basith-08/rose-ui/tree/main/packages/tokens#readme",
+  "bugs": {
+    "url": "https://github.com/Basith-08/rose-ui/issues"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  }
+}

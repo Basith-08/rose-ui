@@ -1,0 +1,28 @@
+{
+  "name": "@rose/playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare:deps": "pnpm --filter @rose/tokens build && pnpm --filter @rose/ui build",
+    "dev": "pnpm run prepare:deps && vite",
+    "build": "pnpm run prepare:deps && vue-tsc --noEmit && vite build",
+    "lint": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@rose/tokens": "workspace:*",
+    "@rose/ui": "workspace:*",
+    "vue": "^3.5.30"
+  },
+  "devDependencies": {
+    "@rose/config": "workspace:*",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vue/tsconfig": "^0.8.1",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vue-tsc": "^3.1.5"
+  }
+}
