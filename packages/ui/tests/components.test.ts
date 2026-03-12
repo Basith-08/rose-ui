@@ -5,7 +5,7 @@ import Button from '../src/components/Button/Button.vue'
 import Input from '../src/components/Input/Input.vue'
 import Modal from '../src/components/Modal/Modal.vue'
 
-describe('@basith-08/rose-ui components', () => {
+describe('@kagami.b/rose-ui components', () => {
     it('renders Button with loading state semantics', () => {
         const wrapper = mount(Button, {
             props: {

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { colors, motion, radius, shadows, spacing, typography, zIndex } from '../index'
 
-describe('@basith-08/tokens', () => {
+describe('@kagami.b/tokens', () => {
     it('exposes the core token groups', () => {
         expect(colors.primary).toBe('#DCA1A1')
         expect(spacing).toBeTruthy()

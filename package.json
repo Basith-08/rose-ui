@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "Rose UI monorepo for publishable Vue 3 design tokens and component libraries.",
   "scripts": {
-    "build": "pnpm --filter @basith-08/tokens build && pnpm --filter @basith-08/rose-ui build",
+    "build": "pnpm --filter @kagami.b/tokens build && pnpm --filter @kagami.b/rose-ui build",
     "build:apps": "pnpm --filter @rose/playground build && pnpm --filter @rose/docs build",
     "pack:local": "node ./scripts/pack-local.mjs",
-    "lint": "pnpm --filter @basith-08/tokens lint && pnpm --filter @basith-08/rose-ui lint && pnpm --filter @rose/playground lint && pnpm --filter @rose/docs lint",
+    "lint": "pnpm --filter @kagami.b/tokens lint && pnpm --filter @kagami.b/rose-ui lint && pnpm --filter @rose/playground lint && pnpm --filter @rose/docs lint",
     "test": "vitest run --coverage",
     "check": "pnpm lint && pnpm build && pnpm build:apps && pnpm test && pnpm smoke:imports",
     "dev:playground": "pnpm --filter @rose/playground dev",

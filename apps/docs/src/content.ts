@@ -13,7 +13,7 @@ export const setupItems = [
     {
         title: 'Package installation',
         value: 'install',
-        content: 'Install @basith-08/rose-ui, @basith-08/tokens, and provide Vue from the host app as the shared peer dependency.',
+        content: 'Install @kagami.b/rose-ui, @kagami.b/tokens, and provide Vue from the host app as the shared peer dependency.',
     },
     {
         title: 'Verification',
@@ -22,17 +22,17 @@ export const setupItems = [
     },
 ]
 
-export const installCommand = `pnpm add @basith-08/rose-ui @basith-08/tokens vue
+export const installCommand = `pnpm add @kagami.b/rose-ui @kagami.b/tokens vue
 pnpm add -D tailwindcss postcss autoprefixer`
 
 export const tailwindSnippet = `import type { Config } from 'tailwindcss'
-import { colors, radius, shadows } from '@basith-08/tokens'
+import { colors, radius, shadows } from '@kagami.b/tokens'
 
 export default {
   content: [
     './index.html',
     './src/**/*.{vue,ts}',
-    './node_modules/@basith-08/rose-ui/dist/**/*.{js,mjs}'
+    './node_modules/@kagami.b/rose-ui/dist/**/*.{js,mjs}'
   ],
   theme: {
     extend: {

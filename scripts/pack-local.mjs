@@ -9,8 +9,8 @@ rmSync(outDir, { recursive: true, force: true })
 mkdirSync(outDir, { recursive: true })
 
 const packages = [
-  { name: '@basith-08/tokens', dir: join(root, 'packages', 'tokens') },
-  { name: '@basith-08/rose-ui', dir: join(root, 'packages', 'ui') },
+  { name: '@kagami.b/tokens', dir: join(root, 'packages', 'tokens') },
+  { name: '@kagami.b/rose-ui', dir: join(root, 'packages', 'ui') },
 ]
 
 for (const pkg of packages) {

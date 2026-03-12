@@ -1,11 +1,11 @@
-# @basith-08/rose-ui
+# @kagami.b/rose-ui
 
-`@basith-08/rose-ui` is a publishable Vue 3 component library built with a Tailwind-first styling contract.
+`@kagami.b/rose-ui` is a publishable Vue 3 component library built with a Tailwind-first styling contract.
 
 ## Installation
 
 ```bash
-pnpm add @basith-08/rose-ui vue @basith-08/tokens
+pnpm add @kagami.b/rose-ui vue @kagami.b/tokens
 pnpm add -D tailwindcss postcss autoprefixer
 ```
 
@@ -15,13 +15,13 @@ Rose UI components rely on Tailwind utility classes. External consumers should e
 
 ```ts
 import type { Config } from "tailwindcss";
-import { colors, radius, shadows } from "@basith-08/tokens";
+import { colors, radius, shadows } from "@kagami.b/tokens";
 
 export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,ts,tsx}",
-    "./node_modules/@basith-08/rose-ui/dist/**/*.{js,mjs}"
+    "./node_modules/@kagami.b/rose-ui/dist/**/*.{js,mjs}"
   ],
   theme: {
     extend: {
@@ -49,7 +49,7 @@ If you are trying the package before publishing to npm, generate a tarball from 
 
 ```vue
 <script setup lang="ts">
-import { Button, Input } from "@basith-08/rose-ui";
+import { Button, Input } from "@kagami.b/rose-ui";
 </script>
 
 <template>
@@ -64,4 +64,4 @@ import { Button, Input } from "@basith-08/rose-ui";
 
 - `vue` is a peer dependency and must be provided by the consuming app.
 - The package ships ESM and TypeScript declarations from `dist/`.
-- Internal workspace apps may still reuse `@basith-08/config`, but external consumers should rely only on `@basith-08/rose-ui`, `@basith-08/tokens`, and standard Tailwind config.
+- Internal workspace apps may still reuse `@kagami.b/config`, but external consumers should rely only on `@kagami.b/rose-ui`, `@kagami.b/tokens`, and standard Tailwind config.

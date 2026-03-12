@@ -7,7 +7,7 @@ import { useToggle } from '../src/hooks/useToggle'
 import { cn } from '../src/utils/cn'
 import { mergeRefs } from '../src/utils/mergeRefs'
 
-describe('@basith-08/rose-ui utilities', () => {
+describe('@kagami.b/rose-ui utilities', () => {
     it('joins truthy class names', () => {
         expect(cn('btn', false, 'active', undefined, null, 'rounded')).toBe('btn active rounded')
     })

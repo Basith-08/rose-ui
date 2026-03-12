@@ -51,8 +51,8 @@ pnpm build
 
 This builds:
 
-- `@basith-08/tokens`
-- `@basith-08/rose-ui`
+- `@kagami.b/tokens`
+- `@kagami.b/rose-ui`
 
 ## Trying the Library in Another Project
 
@@ -93,13 +93,13 @@ Example `tailwind.config.ts`:
 
 ```ts
 import type { Config } from 'tailwindcss'
-import { colors, radius, shadows } from '@basith-08/tokens'
+import { colors, radius, shadows } from '@kagami.b/tokens'
 
 export default {
   content: [
     './index.html',
     './src/**/*.{vue,ts,tsx}',
-    './node_modules/@basith-08/rose-ui/dist/**/*.{js,mjs}'
+    './node_modules/@kagami.b/rose-ui/dist/**/*.{js,mjs}'
   ],
   theme: {
     extend: {
@@ -146,7 +146,7 @@ Example `src/style.css`:
 
 ```vue
 <script setup lang="ts">
-import { Button, Input, Modal } from '@basith-08/rose-ui'
+import { Button, Input, Modal } from '@kagami.b/rose-ui'
 import { ref } from 'vue'
 
 const open = ref(false)
@@ -220,11 +220,11 @@ pnpm release
 This repo currently uses:
 
 ```text
-@basith-08/rose-ui
-@basith-08/tokens
+@kagami.b/rose-ui
+@kagami.b/tokens
 ```
 
-That means you should own the `@basith-08` scope on npm. If your npm username or organization scope is different, rename the packages before publishing.
+That means you should own the `@kagami.b` scope on npm. If your npm username or organization scope is different, rename the packages before publishing.
 
 ### R. Log in to npm
 
@@ -260,7 +260,7 @@ To use it:
 ### U. Install from npm in another project
 
 ```bash
-pnpm add @basith-08/tokens @basith-08/rose-ui vue
+pnpm add @kagami.b/tokens @kagami.b/rose-ui vue
 pnpm add -D tailwindcss postcss autoprefixer
 ```
 

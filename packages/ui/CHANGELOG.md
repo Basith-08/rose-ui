@@ -1,4 +1,4 @@
-# @basith-08/rose-ui
+# @kagami.b/rose-ui
 
 ## 0.1.0
 

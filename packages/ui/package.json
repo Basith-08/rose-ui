@@ -1,5 +1,5 @@
 {
-  "name": "@basith-08/rose-ui",
+  "name": "@kagami.b/rose-ui",
   "version": "0.1.0",
   "type": "module",
   "description": "Publishable Vue 3 component library for Rose UI.",
@@ -28,8 +28,8 @@
     "vue": "^3.5.0"
   },
   "devDependencies": {
-    "@basith-08/config": "workspace:*",
-    "@basith-08/tokens": "workspace:*",
+    "@kagami.b/config": "workspace:*",
+    "@kagami.b/tokens": "workspace:*",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/tsconfig": "^0.8.1",

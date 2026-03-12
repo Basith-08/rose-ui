@@ -4,18 +4,18 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "prepare:deps": "pnpm --filter @basith-08/tokens build && pnpm --filter @basith-08/rose-ui build",
+    "prepare:deps": "pnpm --filter @kagami.b/tokens build && pnpm --filter @kagami.b/rose-ui build",
     "dev": "pnpm run prepare:deps && vite",
     "build": "pnpm run prepare:deps && vue-tsc --noEmit && vite build",
     "lint": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@basith-08/tokens": "workspace:*",
-    "@basith-08/rose-ui": "workspace:*",
+    "@kagami.b/tokens": "workspace:*",
+    "@kagami.b/rose-ui": "workspace:*",
     "vue": "^3.5.30"
   },
   "devDependencies": {
-    "@basith-08/config": "workspace:*",
+    "@kagami.b/config": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/tsconfig": "^0.8.1",
     "autoprefixer": "^10.4.27",

@@ -5,5 +5,5 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @basith-08/tokens@1.1.0
-  - @basith-08/rose-ui@0.1.0
+  - @kagami.b/tokens@1.1.0
+  - @kagami.b/rose-ui@0.1.0

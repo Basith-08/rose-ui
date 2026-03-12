@@ -1,4 +1,4 @@
-# @basith-08/tokens
+# @kagami.b/tokens
 
 ## 1.1.0
 

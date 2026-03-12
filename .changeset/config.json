@@ -8,7 +8,7 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@basith-08/config",
+    "@kagami.b/config",
     "@rose/docs",
     "@rose/playground"
   ]

@@ -46,7 +46,7 @@ try {
   const installState = JSON.parse(readFileSync(join(tempDir, 'package.json'), 'utf8'))
   const installed = Object.keys(installState.dependencies ?? {})
 
-  for (const pkg of ['@basith-08/tokens', '@basith-08/rose-ui', 'vue']) {
+  for (const pkg of ['@kagami.b/tokens', '@kagami.b/rose-ui', 'vue']) {
     if (!installed.includes(pkg)) {
       throw new Error(`Missing installed dependency: ${pkg}`)
     }
@@ -54,8 +54,8 @@ try {
 
   writeFileSync(
     join(tempDir, 'smoke.mjs'),
-    `const tokens = await import('@basith-08/tokens')
-const ui = await import('@basith-08/rose-ui')
+    `const tokens = await import('@kagami.b/tokens')
+const ui = await import('@kagami.b/rose-ui')
 
 for (const key of ['colors', 'spacing', 'radius']) {
   if (!(key in tokens)) throw new Error('Missing token export: ' + key)

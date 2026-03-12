@@ -8,7 +8,7 @@ import {
     Spinner,
     Toast,
     Tooltip,
-} from '@basith-08/rose-ui'
+} from '@kagami.b/rose-ui'
 import ComponentCard from '../components/ComponentCard.vue'
 import DocsSection from '../components/DocsSection.vue'
 
