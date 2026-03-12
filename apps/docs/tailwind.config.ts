@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-import preset from '@rose/config/tailwind/preset'
+import preset from '@basith-08/config/tailwind/preset'
 
 export default {
     presets: [preset],

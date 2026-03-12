@@ -6,9 +6,9 @@ Repository: `https://github.com/Basith-08/rose-ui`
 
 ## Packages
 
-- `@rose/ui`: Vue 3 component library with a Tailwind-first styling contract
-- `@rose/tokens`: runtime design tokens for colors, spacing, radius, shadows, motion, and z-index
-- `@rose/config`: private workspace config package for internal development tooling
+- `@basith-08/rose-ui`: Vue 3 component library with a Tailwind-first styling contract
+- `@basith-08/tokens`: runtime design tokens for colors, spacing, radius, shadows, motion, and z-index
+- `@basith-08/config`: private workspace config package for internal development tooling
 
 ## Quick Start
 
@@ -21,10 +21,11 @@ Useful commands:
 
 - `pnpm dev:docs`: run the docs app
 - `pnpm dev:playground`: run the playground app
-- `pnpm build`: build `@rose/tokens` and `@rose/ui`
+- `pnpm build`: build `@basith-08/tokens` and `@basith-08/rose-ui`
 - `pnpm build:apps`: build the consumer apps
-- `pnpm pack:local`: create local tarballs for `@rose/ui` and `@rose/tokens`
+- `pnpm pack:local`: create local tarballs for `@basith-08/rose-ui` and `@basith-08/tokens`
 - `pnpm verify:consumer`: simulate installing the packed libraries in a temporary external project
+- `pnpm release:npm`: publish versioned packages to npm
 
 ## Usage
 
@@ -39,9 +40,16 @@ pnpm pack:local
 Install them in your personal project:
 
 ```bash
-pnpm add /path/to/rose-ui/.local-packages/rose-tokens-1.0.0.tgz
-pnpm add /path/to/rose-ui/.local-packages/rose-ui-0.0.0.tgz
+pnpm add /path/to/rose-ui/.local-packages/basith-08-tokens-1.0.0.tgz
+pnpm add /path/to/rose-ui/.local-packages/basith-08-rose-ui-0.0.0.tgz
 pnpm add vue
+pnpm add -D tailwindcss postcss autoprefixer
+```
+
+### Install from npm
+
+```bash
+pnpm add @basith-08/tokens @basith-08/rose-ui vue
 pnpm add -D tailwindcss postcss autoprefixer
 ```
 
@@ -49,13 +57,13 @@ pnpm add -D tailwindcss postcss autoprefixer
 
 ```ts
 import type { Config } from 'tailwindcss'
-import { colors, radius, shadows } from '@rose/tokens'
+import { colors, radius, shadows } from '@basith-08/tokens'
 
 export default {
   content: [
     './index.html',
     './src/**/*.{vue,ts,tsx}',
-    './node_modules/@rose/ui/dist/**/*.{js,mjs}'
+    './node_modules/@basith-08/rose-ui/dist/**/*.{js,mjs}'
   ],
   theme: {
     extend: {
@@ -79,7 +87,7 @@ export default {
 
 ```vue
 <script setup lang="ts">
-import { Button, Input, Modal } from '@rose/ui'
+import { Button, Input, Modal } from '@basith-08/rose-ui'
 import { ref } from 'vue'
 
 const open = ref(false)

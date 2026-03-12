@@ -1,17 +1,17 @@
-# @rose/tokens
+# @basith-08/tokens
 
 Publishable design tokens for Rose UI.
 
 ## Installation
 
 ```bash
-pnpm add @rose/tokens
+pnpm add @basith-08/tokens
 ```
 
 ## Usage
 
 ```ts
-import { colors, spacing, radius } from "@rose/tokens";
+import { colors, spacing, radius } from "@basith-08/tokens";
 ```
 
 The package ships compiled ESM and TypeScript declarations from `dist/`.

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { colors } from '@rose/tokens'
-import { Box } from '@rose/ui'
+import { colors } from '@basith-08/tokens'
+import { Box } from '@basith-08/rose-ui'
 import DocsSection from '../components/DocsSection.vue'
 
 const colorEntries = computed(() => Object.entries(colors))

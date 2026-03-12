@@ -2,9 +2,9 @@ import { spawnSync } from 'node:child_process'
 
 const checks = [
   {
-    filter: '@rose/tokens',
+    filter: '@basith-08/tokens',
     expression: `
-      const mod = await import('@rose/tokens');
+      const mod = await import('@basith-08/tokens');
       for (const key of ['colors', 'spacing', 'radius']) {
         if (!(key in mod)) {
           throw new Error('Missing token export: ' + key);
@@ -13,9 +13,9 @@ const checks = [
     `,
   },
   {
-    filter: '@rose/ui',
+    filter: '@basith-08/rose-ui',
     expression: `
-      const mod = await import('@rose/ui');
+      const mod = await import('@basith-08/rose-ui');
       for (const key of ['Button', 'Input', 'Modal', 'createTheme']) {
         if (!(key in mod)) {
           throw new Error('Missing UI export: ' + key);

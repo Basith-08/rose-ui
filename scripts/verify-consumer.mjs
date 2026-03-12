@@ -1,11 +1,10 @@
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 const root = process.cwd()
-const tempDir = mkdtempSync(join(tmpdir(), 'rose-ui-consumer-'))
-const storeDir = join(tempDir, '.pnpm-store')
+const tempDir = mkdtempSync(join(root, '.tmp-consumer-'))
+const storeDir = '/home/junichirou/.local/share/pnpm/store/v10'
 const localVueDir = join(root, 'node_modules', 'vue')
 
 const run = (cmd, args, cwd = tempDir) => {
@@ -40,14 +39,14 @@ try {
     'add',
     '--store-dir',
     storeDir,
-    join(root, '.local-packages', 'rose-tokens-1.0.0.tgz'),
-    join(root, '.local-packages', 'rose-ui-0.0.0.tgz'),
+    join(root, '.local-packages', 'basith-08-tokens-1.0.0.tgz'),
+    join(root, '.local-packages', 'basith-08-rose-ui-0.0.0.tgz'),
   ])
 
   const installState = JSON.parse(readFileSync(join(tempDir, 'package.json'), 'utf8'))
   const installed = Object.keys(installState.dependencies ?? {})
 
-  for (const pkg of ['@rose/tokens', '@rose/ui', 'vue']) {
+  for (const pkg of ['@basith-08/tokens', '@basith-08/rose-ui', 'vue']) {
     if (!installed.includes(pkg)) {
       throw new Error(`Missing installed dependency: ${pkg}`)
     }
@@ -55,8 +54,8 @@ try {
 
   writeFileSync(
     join(tempDir, 'smoke.mjs'),
-    `const tokens = await import('@rose/tokens')
-const ui = await import('@rose/ui')
+    `const tokens = await import('@basith-08/tokens')
+const ui = await import('@basith-08/rose-ui')
 
 for (const key of ['colors', 'spacing', 'radius']) {
   if (!(key in tokens)) throw new Error('Missing token export: ' + key)

@@ -1,5 +1,5 @@
 {
-  "name": "@rose/config",
+  "name": "@basith-08/config",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@eslint/js": "^9.36.0",
-    "@rose/tokens": "workspace:*",
+    "@basith-08/tokens": "workspace:*",
     "@vitejs/plugin-vue": "^6.0.2",
     "autoprefixer": "^10.4.27",
     "eslint": "^9.36.0",

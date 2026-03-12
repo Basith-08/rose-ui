@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-import { colors, radius, shadows } from '@rose/tokens'
+import { colors, radius, shadows } from '@basith-08/tokens'
 
 export const tailwindPreset: Partial<Config> = {
     theme: {

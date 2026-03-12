@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import { Accordion, Badge, Card, Input, Switch } from '@rose/ui'
+import { Accordion, Badge, Card, Input, Switch } from '@basith-08/rose-ui'
 import CodeSample from '../components/CodeSample.vue'
 import DocsSection from '../components/DocsSection.vue'
 import { installCommand, setupItems, tailwindSnippet } from '../content'

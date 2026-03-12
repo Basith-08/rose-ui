@@ -1,4 +1,4 @@
-# @rose/ui
+# @basith-08/rose-ui
 
 ## 0.0.0
 

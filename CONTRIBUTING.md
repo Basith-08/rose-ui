@@ -51,8 +51,8 @@ pnpm build
 
 This builds:
 
-- `@rose/tokens`
-- `@rose/ui`
+- `@basith-08/tokens`
+- `@basith-08/rose-ui`
 
 ## Trying the Library in Another Project
 
@@ -81,8 +81,8 @@ pnpm init
 ### H. Install the Rose UI packages into your personal project
 
 ```bash
-pnpm add /path/to/rose-ui/.local-packages/rose-tokens-1.0.0.tgz
-pnpm add /path/to/rose-ui/.local-packages/rose-ui-0.0.0.tgz
+pnpm add /path/to/rose-ui/.local-packages/basith-08-tokens-1.0.0.tgz
+pnpm add /path/to/rose-ui/.local-packages/basith-08-rose-ui-0.0.0.tgz
 pnpm add vue
 pnpm add -D tailwindcss postcss autoprefixer
 ```
@@ -93,13 +93,13 @@ Example `tailwind.config.ts`:
 
 ```ts
 import type { Config } from 'tailwindcss'
-import { colors, radius, shadows } from '@rose/tokens'
+import { colors, radius, shadows } from '@basith-08/tokens'
 
 export default {
   content: [
     './index.html',
     './src/**/*.{vue,ts,tsx}',
-    './node_modules/@rose/ui/dist/**/*.{js,mjs}'
+    './node_modules/@basith-08/rose-ui/dist/**/*.{js,mjs}'
   ],
   theme: {
     extend: {
@@ -146,7 +146,7 @@ Example `src/style.css`:
 
 ```vue
 <script setup lang="ts">
-import { Button, Input, Modal } from '@rose/ui'
+import { Button, Input, Modal } from '@basith-08/rose-ui'
 import { ref } from 'vue'
 
 const open = ref(false)
@@ -211,4 +211,65 @@ If later you want to version and publish packages formally:
 pnpm changeset
 pnpm version-packages
 pnpm release
+```
+
+## Publishing to npm
+
+### Q. Make sure the npm scope is yours
+
+This repo currently uses:
+
+```text
+@basith-08/rose-ui
+@basith-08/tokens
+```
+
+That means you should own the `@basith-08` scope on npm. If your npm username or organization scope is different, rename the packages before publishing.
+
+### R. Log in to npm
+
+```bash
+npm login
+```
+
+If your npm account uses 2FA for publishing, npm may also ask for an OTP during publish.
+
+### S. Publish the packages
+
+According to npm’s scoped package docs, public scoped packages must be published with public access on first publish. This repo already sets `publishConfig.access` to `public`.
+
+```bash
+pnpm changeset
+pnpm version-packages
+pnpm release:npm
+```
+
+### T. Publish automatically from GitHub Actions
+
+This repo includes:
+
+```text
+.github/workflows/publish-npm.yml
+```
+
+To use it:
+
+1. Add an `NPM_TOKEN` secret in your GitHub repository settings.
+2. Push a version tag such as `v1.0.0`, or run the workflow manually.
+
+### U. Install from npm in another project
+
+```bash
+pnpm add @basith-08/tokens @basith-08/rose-ui vue
+pnpm add -D tailwindcss postcss autoprefixer
+```
+
+### V. Notes about npm publishing
+
+The npm docs note that scoped packages are restricted by default, so public scoped packages need `--access public` on initial publish unless that access is configured in the package metadata.
+
+If later you want to publish manually with plain npm commands instead of Changesets:
+
+```bash
+npm publish --access public
 ```

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Alert, Badge, Button, Card, Spinner } from '@rose/ui'
+import { Alert, Badge, Button, Card, Spinner } from '@basith-08/rose-ui'
 </script>
 
 <template>
@@ -67,7 +67,7 @@ import { Alert, Badge, Button, Card, Spinner } from '@rose/ui'
                 1. Install
             </p>
             <p class="text-sm leading-6 text-slate-500">
-                Add `@rose/ui`, `@rose/tokens`, and provide `vue` from your host app.
+                Add `@basith-08/rose-ui`, `@basith-08/tokens`, and provide `vue` from your host app.
             </p>
         </Card>
 

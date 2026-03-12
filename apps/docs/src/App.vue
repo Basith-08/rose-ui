@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
-import { Badge, Button, Modal } from '@rose/ui'
+import { Badge, Button, Modal } from '@basith-08/rose-ui'
 import DocsShell from './components/DocsShell.vue'
 import { docsNavigation } from './router'
 
@@ -38,7 +38,7 @@ const currentPath = computed(() => route.path)
         >
             <div class="space-y-4">
                 <p class="text-sm leading-6 text-slate-600">
-                    Install `@rose/ui`, `@rose/tokens`, and `vue`, then extend your Tailwind setup with the Rose token values so component utility classes resolve correctly.
+                    Install `@basith-08/rose-ui`, `@basith-08/tokens`, and `vue`, then extend your Tailwind setup with the Rose token values so component utility classes resolve correctly.
                 </p>
                 <div class="flex gap-3">
                     <Button @click="modalOpen = false">

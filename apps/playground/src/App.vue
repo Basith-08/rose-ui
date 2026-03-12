@@ -12,7 +12,7 @@ import {
     Toast,
     Tooltip,
     Switch,
-} from '@rose/ui'
+} from '@basith-08/rose-ui'
 
 const email = ref('')
 const notifications = ref(true)
@@ -91,7 +91,7 @@ function launchToast() {
                 </div>
 
                 <Alert title="Workspace package build" variant="success">
-                    The playground consumes the local `@rose/ui` and `@rose/tokens` packages.
+                    The playground consumes the local `@basith-08/rose-ui` and `@basith-08/tokens` packages.
                 </Alert>
 
                 <div class="space-y-4">
