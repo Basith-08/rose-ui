@@ -1,7 +1,7 @@
 {
   "name": "@rose/docs",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "prepare:deps": "pnpm --filter @basith-08/tokens build && pnpm --filter @basith-08/rose-ui build",

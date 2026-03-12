@@ -1,6 +1,6 @@
 {
   "name": "@basith-08/tokens",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Publishable design tokens for the Rose UI component system.",
   "sideEffects": false,

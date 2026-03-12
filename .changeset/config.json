@@ -8,6 +8,8 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@rose/config"
+    "@basith-08/config",
+    "@rose/docs",
+    "@rose/playground"
   ]
 }

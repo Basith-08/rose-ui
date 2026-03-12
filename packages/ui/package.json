@@ -1,6 +1,6 @@
 {
   "name": "@basith-08/rose-ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Publishable Vue 3 component library for Rose UI.",
   "sideEffects": false,
